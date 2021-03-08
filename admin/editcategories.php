@@ -8,7 +8,7 @@ if(isset($_GET['delete'])){
     if ($conn->query($sql) === TRUE) {
       echo "kategorija (ar datubāzes id=".$_GET["delete"].") veiksmīgi izdzēsta!<br>";
     } else {
-      echo "Kļūda dzēšot sadaļu: " . $sql . "<br>" . $conn->error . "<br>";
+      echo "Kļūda dzēšot skategoriju: " . $sql . "<br>" . $conn->error . "<br>";
     }
 }
 
