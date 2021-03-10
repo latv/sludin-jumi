@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
 					}
 					$date = new DateTime($row["date"]);
 					
-					if (date('d-m-Y',strtotime($date->format('d-m-Y').$addTime))===date("d-m-Y"))
+					if (date('d-m-Y',strtotime($date->format('d-m-Y').$addTime))<=date("d-m-Y"))
 
 					{
 

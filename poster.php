@@ -34,8 +34,19 @@ if ($result->num_rows > 0) {
 </table>
 
 <div class="pagination">
-    <?php for($x=1; $x <= $pages; $x++): ?>
+    
+    <?php 
+    if(isset($_GET["page"])){
+        if ($_GET["page"] != 1)
+        echo '<a href="?page=',($page-1),'" >iepriekšējā lapa <a>';
+    }
+    
+    for($x=1; $x <= $pages; $x++): ?>
         <a href="?page=<?php echo $x; ?>" > <?php echo $x; ?> <a>
-    <?php endfor; ?>
+    <?php endfor;
+        if(isset($_GET["page"])){
+            if ($_GET["page"] != $pages)
+            echo '<a href="?page=',($page+1),'" >nākamā lapa <a>';
+        } ?>
 
 </div>

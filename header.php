@@ -1,17 +1,19 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <h1 id="maintitle">Lietotāja panelis</h1>
-<div id="menu">
+<div class="topnav" id="myTopnav">
+
 <ul>
-  <li><a href="index.php">Sākums</a></li>
+  <a href="index.php">Sākums</a>
   <?php if (isset($_SESSION["login"])){?>
-  <li><a href="index.php?action=editposter">Sludinājuma rediģēšana</a></li>
-  <li><a href="index.php?action=editposter">Profils</a></li>
-  <li><a href="index.php?action=addposter">Pievienot sludinājumu</a></li>  
-  <li><a href="index.php?action=logout">izlogoties</a></li>
+  <a href="index.php?action=editposter">Sludinājuma rediģēšana</a>
+  <a href="index.php?action=editposter">Profils</a>
+  <a href="index.php?action=addposter">Pievienot sludinājumu</a>  
+  <a href="index.php?action=logout">izlogoties</a>
 
   <?php } ?>
   <?php if (!isset($_SESSION["login"])){?>
-    <li><a href="index.php?action=login">Ielogoties</a></li>
-  <li><a href="index.php?action=register">Registrēties</a></li>
+    <a href="index.php?action=login">Ielogoties</a>
+  <a href="index.php?action=register">Registrēties</a>
 
   <?php } ?>
 
