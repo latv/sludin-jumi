@@ -82,7 +82,6 @@ if (isset($_POST['submit'])) {
 <input type="text" name="username" placeholder="Ievadiet lietotājvārdu" required><br><br>
 <input type="password" name="password" placeholder="Ievadiet paroli" required><br><br>
 <input type="submit" name="submit" value="Pieteikties">
-<a href="index.php?register=true" style="margin-left: 10px;">Reģistrēties</a>
 </form>
 </BODY>
 </HTML>

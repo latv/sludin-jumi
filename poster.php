@@ -4,6 +4,7 @@
     <th>kategorija</th>
     <th>Sludinājuma teksts</th>
     <th>Telefona numurs</th>
+    <th>Attēls</th>
   </tr>
   <?php
 // lietotāja ievada
@@ -23,8 +24,14 @@ if ($result->num_rows > 0) {
   // output data of each row
     $i=1+(($page-1)*$perPage);
   while($row = $result->fetch_assoc()) {
+      if ($row["image"] == ""){
+          $image = "no-image.png";
+      }else
+      {
+        $image = $row["image"]; 
+      }
 
-       echo '<tr><td>'.$i.'</td><td>'.$row["category"].'</td><td>',$row["text"],'</td><td>',$row["phone_number"],'</td></tr>';
+       echo '<tr><td>'.$i.'</td><td>'.$row["category"].'</td><td>',$row["text"],'</td><td>',$row["phone_number"],'</td><td>','<img src="uploads/',$image,'" width="100" >','</td></tr>';
         $i++;
   }
 } else {

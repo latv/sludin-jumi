@@ -10,7 +10,7 @@ include 'config.php';
 <HTML lang="lv">
 <HEAD>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="admin.css">
+<link rel="stylesheet" type="text/css" href="../admin.css">
 <title>Administratora panelis</title>
 </HEAD>
 
